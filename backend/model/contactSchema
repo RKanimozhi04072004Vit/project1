@@ -1,0 +1,11 @@
+//const { db1 } = require('../index.js');
+const mongoose=require("mongoose");
+const contactSchema=new mongoose.Schema({
+    "Name":{type:String},
+    "Email":{type:String},
+    "Message":{type:String}
+},{
+    collection:"contacts"
+})
+
+module.exports=mongoose.model("contactSchema",contactSchema);
